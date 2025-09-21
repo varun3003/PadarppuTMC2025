@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Padarppu 2025</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<img src="event-logo.png" alt="Event Logo" class="site-logo" />
+			<nav class="site-nav">
+				<button class="nav-btn nav-home" data-tab="home">Home</button>
+				<button class="nav-btn nav-scoreboard" data-tab="scoreboard">Scoreboard</button>
+				<button class="nav-btn nav-gallery" data-tab="gallery">Gallery</button>
+			</nav>
+		</header>
+
+		<main>
+			<section id="home" class="tab">
+				<div>Text</div>
+                <div id="college-content">
+					<!-- college-wise tables will be inserted here -->
+				</div>
+			</section>
+
+			<section id="scoreboard" class="tab" style="display: none">
+				<h2>Scoreboard</h2>
+				<div id="category-tabs">
+					<button data-cat="Literary">Literary</button>
+					<button data-cat="Fine Arts">Fine Arts</button>
+					<button data-cat="Music">Music</button>
+					<button data-cat="Dance">Dance</button>
+					<button data-cat="Oratory">Oratory</button>
+					<button data-cat="Theatre">Theatre</button>
+					<button data-cat="Others">Others</button>
+				</div>
+				<div id="category-content">
+					<!-- Event-wise tables will be inserted here -->
+				</div>
+			</section>
+
+			<section id="gallery" class="tab" style="display: none">
+				<h2>Winners Gallery</h2>
+				<div id="gallery" class="gallery-grid"></div>
+			</section>
+		</main>
+	</body>
+</html>

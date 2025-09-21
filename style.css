@@ -1,0 +1,39 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/* Header layout */
+.site-header {
+	display: flex;
+	height: 5rem;
+	align-items: center;
+	background-color: whitesmoke; /* optional */
+}
+
+/* Logo */
+.site-logo {
+	height: 100%;
+}
+
+/* Navbar */
+.site-nav {
+	display: flex;
+	height: 100%;
+	flex-grow: 1;
+	justify-content: space-evenly; /* equally spaced buttons */
+}
+
+/* Buttons */
+.nav-btn {
+	height: 100%;
+	width: 100%;
+	background: none;
+	border: none;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.nav-btn:hover {
+	background-color: lightgray;
+}
