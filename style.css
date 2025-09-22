@@ -150,9 +150,9 @@ label {
 }
 
 .scoreboard-table-container {
-  margin-top: 1rem;
   width: 95%;
   overflow-x: auto;
+  margin-bottom: 1rem;
 }
 
 .scoreboard-table-container .score-table {
