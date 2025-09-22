@@ -217,7 +217,7 @@ async function initApp() {
 	await fetchSheetData();
 
 	// Update every 5 seconds
-	setInterval(fetchSheetData, 5000);
+	setInterval(fetchSheetData, 60 * 1000);
 
 	// Category dropdown logic
 	const categorySelect = document.getElementById("category-select");
