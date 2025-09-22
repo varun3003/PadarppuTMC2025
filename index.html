@@ -1,141 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Padarppu 2025</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Padarppu 2025</title>
-	<link rel="stylesheet" href="style.css" />
-	<script src="main.js" defer></script>
-</head>
+	<body>
+		<div id="splash-screen">
+			<img src="event-logo.png" alt="Event Logo" class="splash-logo" />
+		</div>
 
-<body>
-	<header class="site-header">
-		<nav class="site-nav">
-			<button class="nav-btn nav-home active" data-tab="home">Home</button>
-			<button class="nav-btn nav-scoreboard" data-tab="scoreboard">Scoreboard
-				<button class="nav-btn nav-gallery" data-tab="gallery">Gallery</button>
-		</nav>
-	</header>
+		<header class="site-header">
+			<nav class="site-nav">
+				<button class="nav-btn nav-home active" data-tab="home">
+					Home
+				</button>
+				<button class="nav-btn nav-scoreboard" data-tab="scoreboard">
+					Scoreboard
+				</button>
+				<button class="nav-btn nav-gallery" data-tab="gallery">
+					Gallery
+				</button>
+			</nav>
+		</header>
 
-	<main>
-		<section id="home" class="tab">
-			<img src="event-logo.png" alt="Event Logo" class="site-logo" />
-			<div class="intro-text">
-				<h2>Welcome to Padarppu 2025</h2>
-				<p>Multiple colleges, multiple events, one winner! Follow the scoreboard below for live updates.</p>
-			</div>
+		<main>
+			<section id="home" class="tab active">
+				<img src="event-logo.png" alt="Event Logo" class="site-logo" />
+				<div class="intro-text">
+					<h2>Welcome to Padarppu 2025</h2>
+					<p>
+						Multiple colleges, multiple events, one winner! Follow
+						the scoreboard below for live updates.
+					</p>
+				</div>
 
-			<div class="scoreboard-summary">
-				<h3>College Standings</h3>
-				<div class="table-container">
-					<table id="overall-table" class="score-table">
+				<div class="scoreboard-summary">
+					<h3>College Standings</h3>
+					<div class="table-container">
+						<table id="overall-table" class="score-table">
+							<thead>
+								<tr class="table-header">
+									<th class="col-college">College</th>
+									<th class="col-points">Points</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- JS will populate rows -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section id="scoreboard" class="tab">
+				<div class="scoreboard-header">
+					<label for="category-select">Select Category:</label>
+					<select id="category-select" class="category-dropdown">
+						<option value="Literary">Literary</option>
+						<option value="Fine Arts">Fine Arts</option>
+						<option value="Music">Music</option>
+						<option value="Dance">Dance</option>
+						<option value="Oratory">Oratory</option>
+						<option value="Theatre">Theatre</option>
+						<option value="Others">Others</option>
+					</select>
+				</div>
+
+				<div class="scoreboard-table-container">
+					<table id="category-table" class="score-table">
 						<thead>
-							<tr class="table-header">
-								<th class="col-college">College</th>
-								<th class="col-points">Points</th>
-							</tr>
+							<!-- JS will populate rows -->
 						</thead>
 						<tbody>
-							<tr class="table-row">
-								<td class="cell-college">College A</td>
-								<td class="cell-points">450</td>
-							</tr>
-							<tr class="table-row">
-								<td class="cell-college">College B</td>
-								<td class="cell-points">380</td>
-							</tr>
-							<tr class="table-row">
-								<td class="cell-college">College C</td>
-								<td class="cell-points">295</td>
-							</tr>
+							<!-- JS will populate rows based on selected category -->
 						</tbody>
 					</table>
 				</div>
-			</div>
-		</section>
+			</section>
 
+			<section id="gallery" class="tab">
+				<div id="gallery-container" class="gallery-list"></div>
+			</section>
 
-		<section id="scoreboard" class="tab active">
-			<div class="scoreboard-header">
-				<label for="category-select">Select Category:</label>
-				<select id="category-select" class="category-dropdown">
-					<option value="Literary">Literary</option>
-					<option value="Fine Arts">Fine Arts</option>
-					<option value="Music">Music</option>
-					<option value="Dance">Dance</option>
-					<option value="Oratory">Oratory</option>
-					<option value="Theatre">Theatre</option>
-					<option value="Others">Others</option>
-				</select>
-			</div>
-
-			<div class="scoreboard-table-container">
-				<table id="category-table" class="score-table">
-					<thead>
-						<tr>
-							<th class="col-event">Event</th>
-							<!-- Placeholder columns for 35 colleges -->
-							<th>College 1</th>
-							<th>College 2</th>
-							<th>College 3</th>
-							<th>College 4</th>
-							<th>College 5</th>
-							<th>College 6</th>
-							<th>College 7</th>
-							<th>College 8</th>
-							<th>College 9</th>
-							<th>College 6</th>
-							<th>College 7</th>
-							<th>College 8</th>
-							<th>College 9</th>
-							<th>College 6</th>
-							<th>College 7</th>
-							<th>College 8</th>
-							<th>College 9</th>
-							<th>College 6</th>
-							<th>College 7</th>
-							<th>College 8</th>
-							<th>College 9</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="col-event">painting</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td class="col-event">painting</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-						</tr>
-						<!-- JS will populate rows based on selected category -->
-					</tbody>
-				</table>
-			</div>
-		</section>
-
-		<section id="gallery" class="tab"></section>
-		
-		<div class="footer">
-			content
-		</div>
-	</main>
-</body>
-
+			<div class="footer">content</div>
+		</main>
+	</body>
 </html>

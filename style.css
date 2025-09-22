@@ -1,203 +1,271 @@
 body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Sticky header */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  height: 3rem;
-  align-items: center;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* subtle shadow */
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	height: 3rem;
+	align-items: center;
+	background: white;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* subtle shadow */
 }
 
 /* Nav */
 .site-nav {
-  display: flex;
-  height: 100%;
-  flex-grow: 1;
-  justify-content: space-around;
+	display: flex;
+	height: 100%;
+	flex-grow: 1;
+	justify-content: space-around;
 }
 
 /* Nav buttons */
 .nav-btn {
-  background: none;
-  border: none;
-  height: 100%;
-  width: 100%;
-  font-size: 1.25rem;
-  cursor: pointer;
+	background: none;
+	border: none;
+	height: 100%;
+	width: 100%;
+	font-size: 1.25rem;
+	cursor: pointer;
 }
 .nav-btn.active {
-  background-color: #e8e9f3;
-  border-bottom: 2px solid green;
+	background-color: #e8e9f3;
+	border-bottom: 2px solid green;
 }
 
 /* Tabs hidden by default */
 .tab {
-  display: none;
+	display: none;
 }
 
 .tab.active {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* Debug background colors */
 #home {
-  background-color: white;
+	background-color: white;
 }
 
 /* Logo */
 .site-logo {
-  width: 25%;
+	width: 25%;
 }
 
 .intro-text {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: white;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: white;
 }
 
 .scoreboard-summary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  background-color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	background-color: whitesmoke;
 }
 
 .scoreboard-summary h3 {
-  font-size: 2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
+	font-size: 2rem;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
 }
 
 /* Table container: scrollable if table is wider than viewport */
 .table-container {
-  width: 80%;
-  margin-bottom: 1rem;
+	width: 80%;
+	margin-bottom: 1rem;
 }
 
 /* Table styling */
 .score-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
 }
 
 .score-table th {
-  background-color: lightgray;
-  font-weight: bold;
+	background-color: lightgray;
+	font-weight: bold;
 }
 
 .score-table th,
 .score-table td {
-  border: 1px solid gray;
-  padding: 0.5rem 0.75rem;
-  text-align: center;
+	border: 1px solid gray;
+	padding: 0.5rem 0.75rem;
+	text-align: center;
 }
 
 .score-table tr {
-  background-color: white;
+	background-color: white;
 }
 
 .score-table tbody tr:nth-child(even) {
-  background-color: whitesmoke;
+	background-color: whitesmoke;
+}
+
+/* Highlight top 3 standings */
+.first-place {
+	background-color: goldenrod !important;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.second-place {
+	background-color: silver !important;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.third-place {
+	background-color: #cd7f32 !important; /* bronze */
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 #scoreboard {
-  background-color: white;
+	background-color: white;
 }
 
 .scoreboard-header {
-  display: flex;
-  width: 95%;
-  justify-content: left;
-  align-items: center;
-  height: 4rem;
+	display: flex;
+	width: 95%;
+	justify-content: left;
+	align-items: center;
+	height: 4rem;
 }
 
 label {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 .category-dropdown {
-  margin-left: 0.5rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-  background-color: whitesmoke;
+	margin-left: 0.5rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	background-color: whitesmoke;
 }
 
 .category-dropdown option {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 .scoreboard-table-container {
-  width: 95%;
-  overflow-x: auto;
-  margin-bottom: 1rem;
+	width: 95%;
+	overflow-x: auto;
+	margin-bottom: 1rem;
 }
 
 .scoreboard-table-container .score-table {
-  table-layout: auto;
-  text-wrap: nowrap;
+	table-layout: auto;
+	text-wrap: nowrap;
 }
 
 .col-event {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-  background-color: white;
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	background-color: white;
 }
 
 th.col-event {
-  background-color: gray;
+	background-color: gray;
 }
 
 td.col-event {
-  background-color: lightgray;
+	background-color: lightgray;
 }
 
 #gallery {
-  background-color: #e8f5e9;
+	background-color: #e8f5e9;
+}
+
+.gallery-list {
+	display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+	gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-img {
+	height: calc(100vh - 5rem);
+  width: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 150px;
-  color: white;
-  background-color: darkred;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+	color: white;
+	background-color: darkred;
 }
 
 /* Responsive font/spacing */
 @media (max-width: 600px) {
-  .site-logo {
+	.site-logo {
+		width: 80%;
+	}
+	.intro-text {
+		width: 90%;
+	}
+	.scoreboard-summary h3 {
+		letter-spacing: 0.1rem;
+	}
+
+  .gallery-img{
     width: 80%;
+    height: auto;
   }
-  .intro-text {
-    width: 90%;
-  }
-  .scoreboard-summary h3 {
-    letter-spacing: 0.1rem;
-  }
+}
+
+/* Splash screen full cover */
+#splash-screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #ffffff; /* or any brand color */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999; /* always on top */
+}
+
+/* Logo styling */
+.splash-logo {
+	height: 50%;
+}
+
+/* Hide with fade animation */
+#splash-screen.fade-out {
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	pointer-events: none;
 }
