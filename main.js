@@ -27,7 +27,7 @@ async function fetchSheetData() {
       return;
     }
 
-    // The last row contains college abbreviations
+    // The 2nd row contains college abbreviations
     const abbrRow = rows[1].c || [];
 
     // Map column index → { fullName, abbreviation }
@@ -39,7 +39,7 @@ async function fetchSheetData() {
       collegeColumns[i] = { fullName, abbr };
     }
 
-    // Parse data rows (skip last row with abbreviations)
+    // Parse data rows (starts at row 3)
     sheetData = rows
       .slice(2, rows.length)
       .map((r, rowIndex) => {
@@ -74,8 +74,8 @@ async function fetchSheetData() {
       .flat()
       .filter(Boolean);
 
-    // Unique sorted list of college abbreviations
-    collegeAbbrs = [...new Set(sheetData.map((d) => d.abbreviation))].sort();
+    // Unique list of college abbreviations
+    collegeAbbrs = [...new Set(sheetData.map((d) => d.abbreviation))];
 
     // Re-render homepage & scoreboard
     renderOverallScores();
