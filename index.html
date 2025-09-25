@@ -1,93 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Padarppu 2025</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-		<script src="main.js" defer></script>
-	</head>
 
-	<body>
-		<div id="splash-screen">
-			<img src="event-logo.png" alt="Event Logo" class="splash-logo" />
-		</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Padarppu 2025</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+	<script src="main.js" defer></script>
+</head>
 
-		<header class="site-header">
-			<nav class="site-nav">
-				<button class="nav-btn nav-home active" data-tab="home">
-					Home
-				</button>
-				<button class="nav-btn nav-scoreboard" data-tab="scoreboard">
-					Scoreboard
-				</button>
-				<button class="nav-btn nav-gallery" data-tab="gallery">
-					Gallery
-				</button>
-			</nav>
-		</header>
+<body>
+	<div id="splash-screen">
+		<img src="event-logo.png" alt="Event Logo" class="splash-logo" />
+	</div>
 
-		<main>
-			<section id="home" class="tab active">
-				<img src="event-logo.png" alt="Event Logo" class="site-logo" />
-				<div class="intro-text">
-					<h2>Welcome to Padarppu 2025</h2>
-					<p>
-						Multiple colleges, multiple events, one winner! Follow
-						the scoreboard below for live updates.
-					</p>
-				</div>
+	<header class="site-header">
+		<nav class="site-nav">
+			<button class="nav-btn nav-home active" data-tab="home">
+				Home
+			</button>
+			<button class="nav-btn nav-scoreboard" data-tab="scoreboard">
+				Scoreboard
+			</button>
+			<button class="nav-btn nav-gallery" data-tab="gallery">
+				Gallery
+			</button>
+		</nav>
+	</header>
 
-				<div class="scoreboard-summary">
-					<h3>College Standings</h3>
-					<div class="table-container">
-						<table id="overall-table" class="score-table">
-							<thead>
-								<tr class="table-header">
-									<th class="col-college">College</th>
-									<th class="col-points">Points</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- JS will populate rows -->
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</section>
+	<main>
+		<section id="home" class="tab active">
+			<img src="event-logo.png" alt="Event Logo" class="site-logo" />
+			<div class="intro-text">
+				<h2>Welcome to Padarppu 2025</h2>
+				<p>
+					Multiple colleges, multiple events, one winner! Follow
+					the scoreboard below for live updates.
+				</p>
+			</div>
 
-			<section id="scoreboard" class="tab">
-				<div class="scoreboard-header">
-					<label for="category-select">Select Category:</label>
-					<select id="category-select" class="category-dropdown">
-						<option value="Literary">Literary</option>
-						<option value="Fine Arts">Fine Arts</option>
-						<option value="Music">Music</option>
-						<option value="Dance">Dance</option>
-						<option value="Oratory">Oratory</option>
-						<option value="Theatre">Theatre</option>
-						<option value="Others">Others</option>
-					</select>
-				</div>
-
-				<div class="scoreboard-table-container">
-					<table id="category-table" class="score-table">
+			<div class="scoreboard-summary">
+				<h3>College Standings</h3>
+				<div class="table-container">
+					<table id="overall-table" class="score-table">
 						<thead>
-							<!-- JS will populate rows -->
+							<tr class="table-header">
+								<th class="col-college">College</th>
+								<th class="col-points">Points</th>
+							</tr>
 						</thead>
 						<tbody>
-							<!-- JS will populate rows based on selected category -->
+							<!-- JS will populate rows -->
 						</tbody>
 					</table>
 				</div>
-			</section>
+			</div>
+		</section>
 
-			<section id="gallery" class="tab">
-				<div id="gallery-container" class="gallery-list"></div>
-			</section>
+		<section id="scoreboard" class="tab">
+			<div class="scoreboard-header">
+				<label for="category-select">Select Category:</label>
+				<select id="category-select" class="category-dropdown">
+					<option value="Literary">Literary</option>
+					<option value="Fine Arts">Fine Arts</option>
+					<option value="Music">Music</option>
+					<option value="Dance">Dance</option>
+					<option value="Oratory">Oratory</option>
+					<option value="Theatre">Theatre</option>
+					<option value="Others">Others</option>
+				</select>
+			</div>
 
-			<div class="footer">content</div>
-		</main>
-	</body>
+			<div class="scoreboard-table-container">
+				<table id="category-table" class="score-table">
+					<thead>
+						<!-- JS will populate rows -->
+					</thead>
+					<tbody>
+						<!-- JS will populate rows based on selected category -->
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<section id="gallery" class="tab">
+			<div id="gallery-container" class="gallery-list"></div>
+		</section>
+
+		<div class="footer"></div>
+	</main>
+</body>
+
 </html>
